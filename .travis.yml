@@ -8,3 +8,15 @@ before_install:
 
 script:
   - docker run deb538/docker-angular
+
+deploy:
+  provider: elasticbeanstalk
+  region: "ap-south-1"
+  app: "DockerAngular"
+  env: "DockerAngular-env"
+  bucket_name: "elasticbeanstalk-ap-south-1-249522140697"
+  bucket_path: "DockerAngular"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_eky: "AWS_SECRET_KEY"
