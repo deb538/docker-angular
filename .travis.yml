@@ -7,4 +7,4 @@ before_install:
   - docker build -t deb538/docker-angular -f dockerfile.dev .
 
 script:
-  - docker run deb538/docker-angular npm run test -- --coverage
+  - docker run deb538/docker-angular
