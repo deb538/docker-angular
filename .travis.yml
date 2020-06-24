@@ -12,4 +12,4 @@ before_install:
 after_success:
   - docker build -t deb538/docker-angular .
   - echo "$DOCKER_PASSWORD" | docker login -u "DOCKER_ID" --password-stdin
-  - docker push  deb538/docker-angular
+  - docker push deb538/docker-angular
